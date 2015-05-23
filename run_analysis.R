@@ -37,7 +37,8 @@ for (a in 1:maxa) {
     res[i,] = row
   }
 }
-names(res)[1]="activity'
+names(res)[1]="activity"
 names(res)[2]="subjectId"
 write.table(res, file = "averages.txt", row.names=FALSE)
+
 
