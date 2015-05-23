@@ -42,7 +42,7 @@ This section credit to Instructions at https://class.coursera.org/getdata-014/hu
 
 #### Notes
 
-[1] The present code forming the variables 'meanTable' and 'stdTable' seeks to select each column from the combined (train and test) table whose name has match with strings "mean" or "std". By reviewing the files features_info.txt and features.txt from the source data package, the user can modify the code in the lines of this R script to select the specific mean and standard deviation (or any other) variable variants of interest for a given purpose.
+[1] The present code forming the variables 'meanTable' and 'stdTable' seeks to select each column from the combined (train and test) table whose name has a match with substrings "mean" or "std". By reviewing the files features_info.txt and features.txt from the source data package, the user can modify the code in the lines of this R script to select the specific mean and standard deviation (or any other) variable variants of interest for a given purpose.
 
 [2] For the activity names, see the first column "activity" in "averages.txt", read as read.table("averages.txt", header=TRUE), with naming matching with "activity_labels.txt" from the source data package.
 
