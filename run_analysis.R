@@ -23,17 +23,17 @@ albls = lbls[,2]
 acode = lbls[,1]
 maxa = max(acode)
 maxs = max(subs)
-res = data.frame()
+res = data.frame(matrix(nrow=maxa*maxs, ncol=dim(tbl)[2]))
+i = 0
 for (a in 1:maxa) {
-  ACT = lbls[a]
-  for (s in 1:maxs) {
+  activity = albls[a]
+  for (subjectId in 1:maxs) {
+    i = i+1
     st = tbl[tbl[,1]==a & tbl[,2]==s,] # sub-table matching activity a and subject s
     t = st[,-(1:2)] 
     means = t(colMeans(t))
-    row = cbind(ACT,s,means)
-    res = rbind(res,row)
+    row = cbind(activity,subjectId,means)
+    res[i,] = row
   }
 }
-names(res)[1]='ACTIVITY'
-names(res)[2]='SUBJECT ID'
-res
+View(res)
