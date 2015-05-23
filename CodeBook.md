@@ -8,7 +8,7 @@ Please review first the brief README.md in this repo, including the Notes, in pa
 
 The variable naming in the tidy data "averages.txt" matches with the (mean and standard deviation related) variable naming in features_info.txt and features.txt included with the source data packages.
 
-In addition, the first two "activity" and "subjectId" columns in "averages.txt" identifies the activity class (e.g. walking, standing, sitting..) and the volunteer person by ID number for the given row (of averaged mean and std variables for that combination of activity and subject provided in the remaining columns).
+In addition, the first two columns ("activity" and "subjectId") in "averages.txt" identify the activity class (e.g. walking, standing, sitting..) and the volunteer person by ID number for the remaining columns of a given row of observations (specifically, of averaged mean and std variables for the given combination of activity and subject).
 
 ### Definitions:
 
