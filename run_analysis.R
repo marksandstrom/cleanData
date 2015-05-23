@@ -30,13 +30,14 @@ for (a in 1:maxa) {
   activity = toString(albls[a])
   for (subjectId in 1:maxs) {
     i = i+1
-    st = tbl[tbl[,1]==a & tbl[,2]==subjectId,] # sub-table matching activity a and subject s
+    st = tbl[tbl[,1]==a & tbl[,2]==subjectId,] # sub-table matching activity a and subject subjectId
     t = st[,-(1:2)] 
     means = t(colMeans(t))
     row = cbind(activity,subjectId,means)
     res[i,] = row
   }
 }
-names(res)[1]=activity
-names(res)[2]=subjectId
-View(res)
+names(res)[1]="activity'
+names(res)[2]="subjectId"
+write.table(res, file = "averages.txt", row.names=FALSE)
+
