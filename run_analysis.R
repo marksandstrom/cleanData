@@ -1,3 +1,5 @@
+# Please review the local README.md and CodeBook.md for comments on this script
+
 trainTable = read.table("X_train.txt")
 testTable = read.table("X_test.txt")
 table = rbind(trainTable,testTable)
@@ -40,5 +42,3 @@ for (a in 1:maxa) {
 names(res)[1]="activity"
 names(res)[2]="subjectId"
 write.table(res, file = "averages.txt", row.names=FALSE)
-
-
